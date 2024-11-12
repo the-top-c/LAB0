@@ -39,13 +39,16 @@ while True:                                                     #开始无限循
                 break                                           #出现数字，终止循环
         if d==True:
             if int(a)>=0:                                       #判断数字的正负
-                print(s[int(a)])
+               if int(a)<len(s):
+                    print(s[int(a)])
+                else:
+                    print('输入次数不足')
             else:
                 e=len(s)+int(a)                                 #转换负数为正常的次序数
                 if e>=0:                                        #判断转换后的数字是否为正数
                     print(s[e])
                 else:
-                    print('输入个数不足')                        #判断输入的数字转换后的次序是否超出已计算的次数
+                    print('输入次数不足')                        #判断输入的数字转换后的次序是否超出已计算的次数
             d=False                                             #恢复原始参数，方便进行下一次计算
         else:
             print('请输入数字或运算符号')                         #若输入的a既不是计算符号也不是数字，开始下一次输入并进行提示
