@@ -26,6 +26,7 @@ while True:                                                     #开始无限循
         elif a=='/':
             if c==0:                                            #判断除数是否为0
                 print('除数不能为0')
+                continue                                        #当除数为0 时，不计入计算次数
             else:
                 d='{:.2f}'.format(b/c)                          #保留两位小数
                 print(d)
